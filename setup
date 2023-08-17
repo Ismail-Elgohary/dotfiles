@@ -3,4 +3,3 @@
 HERE="$(dirname "$(readlink -f "$0")")"
 
 cp -srfv "$HERE/.config" "$HERE/.local" "$HOME"
-ln -sfv "$HERE/.bash_profile" "$HERE/.bashrc" "$HERE/.bash_aliases" "$HOME"

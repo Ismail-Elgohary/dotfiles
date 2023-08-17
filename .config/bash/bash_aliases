@@ -13,4 +13,3 @@ alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
 alias bashrc="nvim .bashrc"
 alias bashaliases="nvim .bash_aliases"
-
