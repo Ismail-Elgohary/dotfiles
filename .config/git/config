@@ -1,0 +1,13 @@
+[core]
+	editor = nvim
+
+[user]
+	name = Ismail Elgohary
+	email = ismailelgohary173@gmail.com
+
+[push]
+	default = simple
+	autoSetupRemote = true
+
+[alias]
+  cm = commit -m
