@@ -1,10 +1,13 @@
 export EDITOR="nvim"
 export VISUAL="nvim"
 export BROWSER="firefox"
+
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
-export PATH="$PATH:/snap/bin"
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
-. "$XDG_CONFIG_HOME/bash/bashrc"
+export PATH="$HOME/.local/bin:$PATH"
+
+[ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ] && ! pidof -qsx Xorg && exec startx
