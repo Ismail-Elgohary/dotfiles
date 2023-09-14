@@ -20,7 +20,13 @@ HISTSIZE=999999999
 SAVEHIST=$HISTSIZE
 HISTFILE="${HISTFILE:-${XDG_STATE_HOME:-$HOME/.local/state}/history}"
 
+# setting System
+alias spf="doas poweroff"
+alias doas="doas "
+
+# some aliases 
 alias e="$EDITOR"
+alias u="i; doas xbps-install -u xbps; doas xbps-install -u"
 alias xi="doas xbps-install -S"
 alias xr="doas xbps-remove -R"
 alias xq="xbps-query -R"
@@ -31,9 +37,9 @@ alias gpl="git pull"
 alias gph="git push"
 alias c="clear"
 alias gdf="git diff"
-alias ls="ls --color=auto"
+alias ls="ls -hF --color=auto --group-directories-first"
+alias ll="ls -lA"
 alias grep="grep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
 
-alias doas="doas "
