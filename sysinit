@@ -1,0 +1,29 @@
+#!/bin/sh 
+
+HERE="$(direname "$(readlink -f "$0")")"
+PROGRAMSDIR="${PROGRAMSDIR:-$HOME/programs}"
+
+if [ -x "$HERE/setup" ]; then
+  echo "runnig setup dotfiles script..."
+  "$HERE/setup" 
+fi
+
+[ -f "$HERE/.config/zsh/.zprofile" ] &&
+  DISPLAY="${DISPLAY:-:0}" . "$HERE/.config/zsh/.zprofile"
+
+[ -d "$PROGRAMSDIR" ] || mkdir -p "$PROGRAMSDIR"
+
+echo "updating packages"
+sudo xbps-install -Syu xbps
+sudo xbps-install -Syu
+
+if ! command -v doas >/dev/null 2>&1; then 
+  echo "installing doas"
+  sudo xbps-install -Sy opendoas
+  echo "permit nopass keepenv :wheel" | sudo tee /etc/doas.conf >/dev/null
+fi
+
+alias xi="doas xbps-install -Sy"
+
+echo "installing xorg & dependencies"
+xi xorg-server xorg-input-drivers xauth xinit libX11-devel libXinerama-devel libXft-devel xset xsetroot xev 
