@@ -1,4 +1,20 @@
-#myproject
-this is repo
-this repo is created by Elgohary
-<h1>Hallo,I,m Elgohary</h1>
+#dotfiles
+
+Void Linux (operating system)
+
+dwm (window manager) [my build]
+
+dwmblocks (status bar) [my build]
+
+st (terminal) [my build]
+
+dmenu (drop-down menu) [my build]
+
+slock (screen locker) [my build]
+
+neovim (text editor)
+
+mpv (media player)
+
+zathura (document viewer)
+
