@@ -61,5 +61,3 @@ xi strace lm_sensors socklog-void htop nvtop iotop iftop
 
 echo "installing fonts, themes, icons"
 xi dejavu-fonts-ttf font-ibm-plex-ttf amiri-font noto-fonts-emoji arc-theme adwaita-icon-theme adwaita-plus
-
-
