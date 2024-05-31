@@ -1,0 +1,71 @@
+setopt autocd
+setopt interactive_comments
+setopt prompt_subst
+setopt histignorespace
+setopt hist_reduce_blanks
+setopt hist_verify
+setopt hist_ignore_all_dups
+
+
+autoload -U vcs_info
+zstyle ":vcs_info:*" enable git svn
+zstyle ":vcs_info:*" formats "(%b) "
+precmd() {
+	vcs_info
+	echo -ne "\e[1 q"
+}
+export PROMPT='%B%F{cyan}%c %F{blue}${vcs_info_msg_0_}%F{%(?.green.red)}>%f%b '
+
+HISTSIZE=999999999
+SAVEHIST=$HISTSIZE
+HISTFILE="${HISTFILE:-${XDG_STATE_HOME:-$HOME/.local/state}/history}"
+
+# setting System
+
+alias spf="doas poweroff"
+alias doas="doas "
+alias dm="doas nmtui"
+alias dmi="doas make install"
+alias xr="doas xbps-remove -R"
+alias xi="doas xbps-install -S"
+alias u="xi; doas xbps-install -u xbps; doas xbps-install -u"
+
+# some aliases
+
+alias e="$EDITOR"
+alias xq="xbps-query -R"
+alias q="exit"
+alias c="clear"
+alias rm="trash"
+alias kde="kdeconnect-app"
+alias egrep="egrep --color=auto"
+alias fgrep="fgrep --color=auto"
+alias grep="grep --color=auto"
+alias ll="ls -lA"
+alias ls="ls -hF --color=auto --group-directories-first"
+
+# git 
+
+alias gst="git status -sb"
+alias gpl="git pull"
+alias gph="git push"
+alias gdf="git diff"
+alias gm="git commit -m"
+alias gd="git add ."
+alias gco="git checkout"
+
+# shortcut files 
+
+alias pdb="e $HOME/programs/dwmblocks/blocks.h"
+alias dcz="e $HOME/dotfiles/.config/zsh/.zshrc"
+alias pdc="e $HOME/programs/dwm/config.h"
+alias pdm="e $HOME/programs/dmenu/config.def.h"
+alias psc="e $HOME/programs/st/config.h"
+alias dczp="e $HOME/dotfiles/.config/zsh/.zprofile"
+alias dczz="e $HOME/dotfiles/.config/zathura/zathurarc "
+alias dcx="e $HOME/dotfiles/.config/x11/xinitrc"
+alias ds="e $HOME/dotfiles/sysinit"
+alias dcn="cd $HOME/dotfiles/.config/nvim"
+alias dlv="e $HOME/dotfiles/.local/bin/volumectl"
+alias dssc="e $HOME/dotfiles/.config/sxhkd/sxhkdrc"
+

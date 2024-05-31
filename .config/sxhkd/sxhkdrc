@@ -1,0 +1,36 @@
+super  + Return
+	st
+
+alt + w
+	$BROWSER
+
+alt + F11
+		dmenu_screenshot
+
+alt + F9
+	dmenu_record
+
+
+alt + shift + p 
+		passmenu
+
+alt + m 
+	$HOME/scripts/mount.sh
+
+
+alt + shift + q 
+		$HOME/scripts/exit.sh
+
+alt + r 
+		dmenu_run
+
+alt + F10 
+		cheese
+
+alt + shift + {equal,minus,BackSpace}
+	volumectl {inc,dec,toggle}
+
+
+alt + shift + o
+	clipmenu
+

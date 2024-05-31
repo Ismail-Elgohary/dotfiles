@@ -1,0 +1,65 @@
+#!/bin/bash
+# vim: wrap
+
+PROGRAMSDIR="${PROGRAMSDIR:-$HOME/programs}"
+[ -d "$PROGRAMSDIR" ] || mkdir -p "$PROGRAMSDIR"
+
+echo "updating packages"
+sudo xbps-install -Syu xbps 
+sudo xbps-install -Syu 
+		
+if ! command -v doas >/dev/null 2>&1; then
+			echo "installng doas"
+			sudo xbps-install -Syu opendoas 		
+			sudo cp -n "$HERE/.config/doas/doas.conf" /etc/doas.conf
+				
+fi
+
+if [ -x "$HERE/setup" ]; then 
+			echo "running setup dotfiles script..."
+			"$HERE/setup" dotfiles
+fi
+			
+alias xi="doas xbps-install -Sy"
+
+echo "installing xorg & dependencies"
+xi xorg-server xorg-input-drivers xauth xinit libX11-devel libXinerama-devel libXft-devel libXrandr-devel xset xsetroot xev fribidi-devel openssl-devel gcr-devel webkit2gtk-devel
+
+echo "installing drivers & firmware"
+xi mesa mesa-dri mesa-vdpau mesa-vaapi xf86-video-amdgpu xf86-video-intel linux-firmware intel-video-accel
+
+echo "installing network tools"
+xi dhcpcd wpa_supplicant ufw bluez bluez-alsa macchanger
+
+echo "installing pipewire"
+xi pipewire wireplumber pulsemixer libspa-bluetooth
+doas cp -a /usr/share/pipewire /usr/share/wireplumber /etc
+
+echo "installing general tools"
+xi xtools xdg-utils xdg-user-dirs sxhkd xdotool xclip xsel xrdb xwallpaper xbanish xprop xssstate acpilight wmname curl wget git patch rsync gnupg gnupg2 openssh pass pass-otp passmenu bc nq pv slop maim dunst time entr mlocate nnn fzy ripgrep fd dust ntp scron libnotify darkhttpd yt-dlp bsdtar tar xz gzip bzip2 zstd zip unzip tlp thermald earlyoom buku urlview dragon highlight redshift newsboat calcurse sc-im wiki-tui srm lftp hwinfo firejail fribidi zbar qrencode mediainfo bat delta tig vsv clipmenu translate-shell screenkey duf direnv lz4jsoncat gnome-epub-thumbnailer
+
+echo "installing manual pages"
+xi man-pages man-pages-posix texinfo tealdeer
+
+echo "installing text editor & zsh"
+xi vim neovim tmux zsh zsh-completions zsh-autosuggestions zsh-history-substring-search
+
+echo "installing multimedia tools"
+xi ffmpeg ImageMagick gimp sox mpv nsxiv zathura mupdf zathura-pdf-mupdf zathura-ps zathura-djvu libwebp
+
+echo "installing filesystems support"
+xi fuse3 autofs exfat-utils fuse-sshfs mtpfs simple-mtpfs
+
+echo "installing music players"
+xi mpd mpc ncmpcpp
+
+echo  "installing camera"
+xi cheese 
+
+echo "installing system monitoring tools"
+xi strace lm_sensors socklog-void htop nvtop iotop iftop
+
+echo "installing fonts, themes, icons"
+xi dejavu-fonts-ttf font-ibm-plex-ttf amiri-font noto-fonts-emoji arc-theme adwaita-icon-theme adwaita-plus
+
+

@@ -1,0 +1,25 @@
+[init]
+	defaultBranch = main
+
+[core]
+	editor = nvim
+
+[user]
+	name = Ismail Elgohary
+	email = ismailelgohary173@gmail.com
+
+[push]
+	default = simple
+	autoSetupRemote = true
+
+[alias]
+  g  =	git
+  gdf=  diff
+  gpl=  pull
+  gph=  push
+  gst=  status -sb
+  gd =  add .
+  gl =  clone
+  gm = commit -m
+  gco = checkout
+   

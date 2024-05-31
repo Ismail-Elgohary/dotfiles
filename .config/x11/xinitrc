@@ -1,0 +1,9 @@
+#!/bin/bash
+xwallpaper --zoom ~/pexels-eberhardgross-1612351.jpg
+sxhkd &
+dwmblocks &
+pipewire &
+xset r rate 200 50 &
+exec ssh-agent dwm
+
+
