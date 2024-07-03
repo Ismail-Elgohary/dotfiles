@@ -2,7 +2,6 @@ vim.cmd("set cursorline")
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.background = "dark"
-vim.g.colors_name = '1carsoft'
 
 vim.opt.splitright = true
 vim.opt.splitbelow = true
