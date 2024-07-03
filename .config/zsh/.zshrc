@@ -53,7 +53,7 @@ alias gdf="git diff"
 alias gm="git commit -m"
 alias gd="git add ."
 alias gco="git checkout"
-
+alias gl="git clone"
 # shortcut files 
 
 alias pdb="e $HOME/programs/dwmblocks/blocks.h"
