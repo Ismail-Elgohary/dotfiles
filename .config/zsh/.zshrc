@@ -56,17 +56,10 @@ alias gco="git checkout"
 alias gl="git clone"
 # shortcut files 
 
-alias pdb="e $HOME/programs/dwmblocks/blocks.h"
-alias dcz="e $HOME/dotfiles/.config/zsh/.zshrc"
-alias pdc="e $HOME/programs/dwm/config.h"
-alias pdm="e $HOME/programs/dmenu/config.def.h"
-alias psc="e $HOME/programs/st/config.h"
 alias dczp="e $HOME/dotfiles/.config/zsh/.zprofile"
-alias dczz="e $HOME/dotfiles/.config/zathura/zathurarc "
+alias dcz="e $HOME/dotfiles/.config/zsh/.zshrc" 
 alias dcx="e $HOME/dotfiles/.config/x11/xinitrc"
-alias ds="e $HOME/dotfiles/sysinit"
 alias dcn="cd $HOME/dotfiles/.config/nvim"
-alias dlv="e $HOME/dotfiles/.local/bin/volumectl"
 alias dssc="e $HOME/dotfiles/.config/sxhkd/sxhkdrc"
 
 PROGRAMSDIR="${PROGRAMSDIR:-$HOME/programs}"
