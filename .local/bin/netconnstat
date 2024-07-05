@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 case "$(cat /sys/class/net/w*/operstate 2>/dev/null)" in
 	up)
 		wifi=" W $(awk '/^\s*w/{print int($3*100/70)}' /proc/net/wireless)%"
@@ -13,4 +12,3 @@ esac
 [ -n "$(cat /sys/class/net/tun*/operstate 2>/dev/null)" ] && tun=" [TUN]"
 
 echo "$eth$wifi$tun"
-

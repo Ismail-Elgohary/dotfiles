@@ -22,6 +22,9 @@ HISTFILE="${HISTFILE:-${XDG_STATE_HOME:-$HOME/.local/state}/history}"
 
 # setting System
 
+autoload -U compinit
+compinit
+
 alias spf="doas poweroff"
 alias doas="doas "
 alias dm="doas nmtui"
@@ -31,7 +34,6 @@ alias xi="doas xbps-install -S"
 alias u="xi; doas xbps-install -u xbps; doas xbps-install -u"
 
 # some aliases
-
 alias e="$EDITOR"
 alias xq="xbps-query -R"
 alias q="exit"
@@ -45,7 +47,6 @@ alias ll="ls -lA"
 alias ls="ls -hF --color=auto --group-directories-first"
 
 # git 
-
 alias gst="git status -sb"
 alias gpl="git pull"
 alias gph="git push"
@@ -54,13 +55,14 @@ alias gm="git commit -m"
 alias gd="git add ."
 alias gco="git checkout"
 alias gl="git clone"
-# shortcut files 
 
+# shortcut files
 alias dczp="e $HOME/dotfiles/.config/zsh/.zprofile"
 alias dcz="e $HOME/dotfiles/.config/zsh/.zshrc" 
 alias dcx="e $HOME/dotfiles/.config/x11/xinitrc"
 alias dcn="cd $HOME/dotfiles/.config/nvim"
 alias dssc="e $HOME/dotfiles/.config/sxhkd/sxhkdrc"
+
 
 PROGRAMSDIR="${PROGRAMSDIR:-$HOME/programs}"
 ZSHPLUGINSDIR="${ZSHPLUGINSDIR:-/usr/share/zsh/plugins}"
