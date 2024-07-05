@@ -32,7 +32,6 @@ alias dmi="doas make install"
 alias xr="doas xbps-remove -R"
 alias xi="doas xbps-install -S"
 alias u="xi; doas xbps-install -u xbps; doas xbps-install -u"
-
 # some aliases
 alias e="$EDITOR"
 alias xq="xbps-query -R"
