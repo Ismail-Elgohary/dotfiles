@@ -25,6 +25,7 @@ HISTFILE="${HISTFILE:-${XDG_STATE_HOME:-$HOME/.local/state}/history}"
 autoload -U compinit
 compinit
 
+# some aliases
 alias spf="doas poweroff"
 alias doas="doas "
 alias dm="doas nmtui"
@@ -32,7 +33,6 @@ alias dmi="doas make install"
 alias xr="doas xbps-remove -R"
 alias xi="doas xbps-install -S"
 alias u="xi; doas xbps-install -u xbps; doas xbps-install -u"
-# some aliases
 alias e="$EDITOR"
 alias xq="xbps-query -R"
 alias q="exit"
