@@ -15,6 +15,7 @@ map j zoom out
 map i recolor
 map p print
 map g go to top
+map m mark
 ------------------------------------------------------------
 set recolor 
 set default-bg                  "#242933"
@@ -45,4 +46,3 @@ set recolor-darkcolor           "#d8dee9"
 set recolor-lightcolor          "#242933"
 set render-loading-bg           "#242933"
 set render-loading-fg           "#d8dee9"
-

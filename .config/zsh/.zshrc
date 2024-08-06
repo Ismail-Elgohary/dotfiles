@@ -62,7 +62,6 @@ alias dcx="e $HOME/dotfiles/.config/x11/xinitrc"
 alias dcn="cd $HOME/dotfiles/.config/nvim"
 alias dssc="e $HOME/dotfiles/.config/sxhkd/sxhkdrc"
 
-
 PROGRAMSDIR="${PROGRAMSDIR:-$HOME/programs}"
 ZSHPLUGINSDIR="${ZSHPLUGINSDIR:-/usr/share/zsh/plugins}"
 if [ -f "$ZSHPLUGINSDIR/zsh-history-substring-search/zsh-history-substring-search.zsh" ]; then
