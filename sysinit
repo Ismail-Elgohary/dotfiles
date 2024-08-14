@@ -51,10 +51,10 @@ echo "installing filesystems support"
 xi fuse3 autofs exfat-utils fuse-sshfs mtpfs simple-mtpfs
 
 echo "installing music players"
-xi mpd mpc ncmpcpp
+xi mpd mpc ncmpcpp cava 
 
 echo  "installing camera"
-xi cheese 
+xi cheese guvcview
 
 echo "installing system monitoring tools"
 xi strace lm_sensors socklog-void htop nvtop iotop iftop

@@ -77,3 +77,4 @@ if [ -f "$ZSHPLUGINSDIR/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh" ]; t
 fi
 [ -f "$PROGRAMSDIR/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh" ] &&
 	. "$PROGRAMSDIR/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh"
+
