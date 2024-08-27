@@ -1,18 +1,28 @@
 super  + Return
-	st
+	   st
 
 alt + w
 	$BROWSER
 
-alt + F11
-		dmenu_screenshot
 
 alt + F9
 	dmenu_record
 
 
+alt + F10 
+		guvcview
+
+
+alt + F11
+	dmenu_screenshot
+
+
 alt + shift + p 
-		passmenu
+		 passmenu -i -r -l 10 -p "passmenu:"
+
+alt + shift + o
+		 clipmenu -i -r -l 10 -p "clipmenu:"
+
 
 alt + shift + m 
 	$HOME/scripts/mount.sh
@@ -21,18 +31,11 @@ alt + shift + m
 alt + shift + q 
 		$HOME/scripts/exit.sh
 
-alt + r 
-		dmenu_run
 
-alt + F10 
-		guvcview
 
 alt + shift + {equal,minus,BackSpace}
 	volumectl {inc,dec,toggle}
 
-
-alt + shift + o
-	clipmenu
 
 
 XF86MonBrightnessUp
@@ -42,4 +45,15 @@ XF86MonBrightnessDown
 	xbacklight -dec 10
 
 
+
+alt + r 
+	dmenu_run
+
+
+alt + shift + b 
+			 dmenu-bookmark
+
+
+alt + shift + d 
+			dmenu-dir
 
