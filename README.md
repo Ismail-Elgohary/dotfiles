@@ -19,7 +19,3 @@ mpv (media player)
 zathura (document viewer)
 
 # dotfiles
-# dotfiles
-# dotfiles
-# dotfiles
-# dotfiles
