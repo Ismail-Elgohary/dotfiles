@@ -3,5 +3,5 @@ xset r rate 200 50 &
 sxhkd &
 dwmblocks &
 pipewire &
-xwallpaper --zoom ~/pexels-eberhardgross-1612351.jpg &
+xwallpaper --zoom ~/docs/Pictures/pexels-eberhardgross-1612351.jpg &
 exec ssh-agent dwm
