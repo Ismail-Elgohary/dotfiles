@@ -26,6 +26,9 @@ return {
 			},
 			handlers = {
 				function(name)
+					if name ==  "tsserver" then
+					name = "ts_ls"
+					end
 					require("lspconfig")[name].setup({ capabilities = capabilities })
 				end,
 				["gopls"] = function()
