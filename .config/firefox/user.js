@@ -16,4 +16,3 @@ user_pref("extensions.pocket.enabled", false);
 user_pref("accessibility.typeaheadfind.enablesound", false);
 user_pref("layout.css.prefers-color-scheme.content-override", 0);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
-
