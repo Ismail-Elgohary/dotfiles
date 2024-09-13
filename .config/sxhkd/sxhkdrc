@@ -25,11 +25,7 @@ alt + shift + o
 
 
 alt + shift + m 
-	$HOME/scripts/mount.sh
-
-
-alt + shift + q 
-		$HOME/scripts/exit.sh
+	~/src/scripts/mount.sh
 
 
 
