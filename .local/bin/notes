@@ -1,0 +1,64 @@
+#/bin/bash 
+
+# Directory where notes will be stored
+NOTES_DIR="$HOME/docs/notes"
+
+# Create the notes directory if it doesn't exist
+mkdir -p "$NOTES_DIR"
+
+# Function to add or edit a note
+add_or_edit_note() {
+    read -p "Enter the note title: " title
+    note_file="$NOTES_DIR/$title.txt"
+    nvim "$note_file"  # Open the note in Neovim
+}
+
+# Function to list all notes
+list_notes() {
+    echo "Your notes:"
+    ls "$NOTES_DIR"
+}
+
+# Function to view a note (opens the note in Neovim)
+view_note() {
+    read -p "Enter the note title to view: " title
+    note_file="$NOTES_DIR/$title.txt"
+    if [[ -f "$note_file" ]]; then
+        nvim "$note_file"  # Open the note in Neovim for viewing
+    else
+        echo "Note not found!"
+    fi
+}
+
+# Function to delete a note
+delete_note() {
+    read -p "Enter the note title to delete: " title
+    note_file="$NOTES_DIR/$title.txt"
+    if [[ -f "$note_file" ]]; then
+        rm "$note_file"
+        echo "Note $title deleted."
+    else
+        echo "Note not found!"
+    fi
+}
+
+# Menu for note management
+while true; do
+    echo
+    echo "1) Add or edit a note"
+    echo "2) List notes"
+    echo "3) View a note"
+    echo "4) Delete a note"
+    echo "5) Exit"
+    read -p "Choose an option: " choice
+
+    case $choice in
+        1) add_or_edit_note ;;
+        2) list_notes ;;
+        3) view_note ;;
+        4) delete_note ;;
+        5) echo "Goodbye!"; exit ;;
+        *) echo "Invalid option. Please try again." ;;
+    esac
+done
+
