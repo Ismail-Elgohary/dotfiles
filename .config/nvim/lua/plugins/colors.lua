@@ -1,7 +1,14 @@
-return {
-		"love-pengy/lillilac.nvim",
-		opts = { lazy = true },
-		config  = function(opts)
-				vim.cmd.colorscheme("lillilac")
-			end,
-		}
+return
+{
+        "rose-pine/neovim",
+        name = "rose-pine",
+        config = function()
+            require('rose-pine').setup({
+                disable_background = true,
+            })
+
+            vim.cmd("colorscheme rose-pine")
+
+        end
+
+}
