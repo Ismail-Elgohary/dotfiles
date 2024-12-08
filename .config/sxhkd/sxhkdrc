@@ -24,11 +24,6 @@ alt + shift + o
 		 clipmenu -i -r -l 10 -p "clipmenu:"
 
 
-alt + shift + m 
-	~/src/scripts/mount.sh
-
-
-
 alt + shift + {equal,minus,BackSpace}
 	volumectl {inc,dec,toggle}
 
@@ -46,9 +41,6 @@ alt + r
 	dmenu_run
 
 
-alt + shift + b 
-			 dmenu-bookmark
-
-
 alt + shift + d 
 			dmenu-dir
+
