@@ -1,5 +1,5 @@
 super  + Return
-	   st
+	  ghostty 
 
 alt + w
 	$BROWSER
